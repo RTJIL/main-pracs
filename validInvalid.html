@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    input:valid {
+      border: 2px solid green;
+      background-color: #e8fce8;
+    }
+
+    input:invalid {
+      border: 2px solid red;
+      background-color: #ffe8e8;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="email">Email</label>
+    <input type="email" id="email" required />
+
+    <label for="zip">ZIP Code</label>
+    <input type="text" id="zip" pattern="\d{5}" required />
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

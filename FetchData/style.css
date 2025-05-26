@@ -8,6 +8,7 @@ body {
   padding: 10px;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 [data-random-btn]:hover, [data-search-btn] {

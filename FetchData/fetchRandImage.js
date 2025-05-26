@@ -10,16 +10,24 @@
     });
 } */
 
-function  fetchRandImage() {
-  return fetch(
-    'https://api.giphy.com/v1/gifs/translate?api_key=9D03cau88SxQ5iX4hF8HgStRBQdce2I6&s=cats',
-    { mode: 'cors' }
-  )
-    .then(response => response.json())
-    .then(data => data.data.images.original.url)
-    .catch((e) => {
-      console.error("Error fetching image: " + e);
-    });
+async function fetchRandImage() {
+  try {
+    const response = await fetch(
+      'https://api.giphy.com/v1/gifs/translate?api_key=9D03cau88SxQ5iX4hF8HgStRBQdce2I6&s=cats',
+      { mode: 'cors' }
+    );
+
+    if(!response.ok) {
+      throw new Error('Network was not ok')
+    }
+
+    const catData = await response.json();
+    const catDataUrl = catData.data.images.original.url;
+    return catDataUrl;
+  } catch (e) {
+    console.error('Error fetching image: ' + e);
+    return null;
+  }
 }
 
 export { fetchRandImage };

@@ -5,7 +5,10 @@ function fetchSearchImage(searchTerm) {
   )}&limit=1`;
 
   return fetch(url, { mode: 'cors' })
-    .then((response) => response.json())
+    .then((response) => {
+        if (!response.ok) throw new Error(`HTTP erro! Status ${response.status}`)
+        return response.json();
+    })
     .then((data) => {
       if (!data.data || data.data.length === 0) {
         return null;

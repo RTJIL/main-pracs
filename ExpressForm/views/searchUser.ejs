@@ -1,0 +1,19 @@
+<h1><%= title %></h1>
+
+<form action="/search" method="GET">
+  <input type="text" name="firstName" placeholder="First Name" />
+  <input type="text" name="email" placeholder="Email" />
+  <button type="submit">Search</button>
+</form>
+
+<% if (typeof users !== "undefined" && users.length > 0) { %>
+<ul>
+  <% users.forEach(user => { %>
+  <li><%= user.firstName %> <%= user.lastName %> - <%= user.email %></li>
+  <% }) %>
+</ul>
+<% } else if (users) { %>
+<p>No users found matching your criteria.</p>
+<% } %>
+
+<a href="/">Back to Home</a>

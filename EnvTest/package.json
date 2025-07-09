@@ -10,7 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^17.0.1",
     "express": "^5.1.0"
+=======
+    "dotenv": "^17.0.1"
+>>>>>>> 38be7342ab6538d5df72a24140e0435699650d3b
   }
 }

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+main form button {
+    width: 80%;
+    padding: 6px;
+    font-size: 2rem;
+    border-radius: 8px;
+}
+
+main input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+}
